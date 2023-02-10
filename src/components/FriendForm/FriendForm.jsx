@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
-import css from './FriendForm.module.css'
+import PropTypes from 'prop-types';
+import css from './FriendForm.module.css';
 
 export class FriendForm extends Component {
   state = {
@@ -56,3 +57,7 @@ export class FriendForm extends Component {
     );
   }
 }
+
+FriendForm.propTypes = {
+  onSubmit: PropTypes.func.isRequired,
+};

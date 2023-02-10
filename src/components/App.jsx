@@ -14,12 +14,9 @@ export class App extends Component {
       { id: 'id-4', name: 'Annie Copeland', number: '227-91-26' },
     ],
     filter: '',
-    name: '',
-    number: '',
   };
-
   addContacts = contact => {
-    const isExist = this.state.contacts.find(({ name }) => {
+    const isExist = this.state.contacts.some(({ name }) => {
       return contact.name === name;
     });
     if (isExist) {

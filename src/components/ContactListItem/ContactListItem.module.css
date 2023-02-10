@@ -10,3 +10,7 @@
 .btnDelete:hover {
   background-color: #ce1010;
 }
+
+.listSt{
+  list-style: none;
+}

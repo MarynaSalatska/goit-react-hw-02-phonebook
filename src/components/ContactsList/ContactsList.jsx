@@ -1,7 +1,7 @@
 import { ContactListItem } from 'components/ContactListItem/ContactListItem';
 import PropTypes from 'prop-types';
 
-export function ContactsList({ contacts,onBtnDelete }) {
+export function ContactsList({ contacts, onBtnDelete }) {
   return (
     <ul>
       {contacts.map(({ id, name, number }) => (
@@ -18,6 +18,7 @@ export function ContactsList({ contacts,onBtnDelete }) {
 }
 
 ContactsList.propTypes = {
+  onBtnDelete: PropTypes.func.isRequired,
   contacts: PropTypes.arrayOf(
     PropTypes.exact({
       id: PropTypes.string.isRequired,
